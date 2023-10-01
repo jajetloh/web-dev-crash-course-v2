@@ -1,0 +1,14 @@
+<nav class="c-navbar-bg text-primary d-flex align-items-center">
+    <span class="c-logo mx-3 my-1"><a routerLink="/" class="c-logo-link">Web Dev Crash Course</a></span>
+    <button class="btn btn-sm btn-outline-primary border-0 px-1 py-0 mx-1" [routerLinkActive]="'text-white'" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</button>
+    <button class="btn btn-sm btn-outline-primary border-0 px-1 py-0 mx-1" [routerLinkActive]="'text-white'" routerLink="/tutorial">Tutorial</button>
+    <button class="btn btn-sm btn-outline-primary border-0 px-1 py-0 mx-1" [routerLinkActive]="'text-white'" routerLink="/resources">Resources</button>
+    <a href="https://forms.gle/ZBnW6XknrKVuAG2LA" class="btn btn-sm btn-outline-primary border-0 px-1 py-0 mx-1" target="_blank">Feedback</a>
+</nav>
+<div class="d-flex">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-1"></div>
+</div>

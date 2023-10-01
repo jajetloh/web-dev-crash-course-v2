@@ -1,0 +1,12 @@
+.c-navbar-bg {
+    background-color: lightgray;
+}
+
+.c-logo {
+    font-family: "Helvetica", sans-serif;
+    font-weight: lighter;
+}
+
+.c-logo-link {
+    text-decoration: none;
+}

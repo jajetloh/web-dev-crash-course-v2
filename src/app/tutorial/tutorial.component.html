@@ -1,0 +1,281 @@
+<div class="my-5">
+    <h1>
+        1. Overview of Web Development
+    </h1>
+    <div>
+        Web development is the building of software designed to be used on Internet Browsers. This can mean web pages on the Internet, or on a company's private network, or even just hosted locally on your computer. To get a better sense of what web development is, let's go through some things that <b>aren't</b> web development...
+    </div>
+    <ul>
+        <li><b>Desktop applications</b>, like <code>.exe</code> files on Windows or <code>.dmg</code> files on Mac. These do not run on Internet Browsers, and so they rely on the Operating System's specific tools to be built. This is also why it is difficult to have cross-platform software.</li>
+        <li><b>Scripts</b>, like Python scripts or shell scripts. Scripts are designed to do very specific tasks, and often have very basic user interfaces. Web and front-end development is targeted mostly at the general public as end users, so the interface must be easy to use.</li>
+        <li><b>Google Sheets/Excel</b>, these are both great tools for building applications, especially as building basic applications is relatively straightforward. However, building a tool inside such a tool also has severe limitations, e.g. difficulties with scaling to a larger size, version control, etc.</li>
+        <li><b>Blogging sites e.g. WordPress, Tumblr</b>, although this is a grey area. Blogging sites usually allow you to define <i>static</i> content, but it can be difficult to define <i>dynamic</i> content (e.g. a form which users can submit, or complex UI elements which change based on user input). You usually have freedom to use your own HTML/CSS freely otherwise.</li>
+    </ul>
+    <div>
+        Even though these examples are not web development, each of them are legitimate tools and solutions for problems in their own right. <b>Web development is a tool</b>, and it's important to understand what the capabilities and limitations of any tool are. Some pros of web development are:
+    </div>
+    <ul>
+        <li>A very visual and user-friendly interface for end users</li>
+        <li>Compatibility across many different browsers and devices (e.g. Chrome, Firefox, Microsoft Edge, Safari, on computers, tablets, phones, etc.)</li>
+        <li>Applications can be run on the user's device, so it is possible to shift some computational burden away from the server hosting the website</li>
+        <li>Front-end development is very common, so it is relatively easy to find developers to build web applications (relative to perhaps, building a desktop Linux application)</li>
+    </ul>
+    <div>And some cons...</div>
+    <ul>
+        <li>There is a substantial learning curve! Building a web application is not as easy as assembling a basic application in Excel or Google Sheets</li>
+        <li>Building web applications can be time-consuming! Before building a web application, ask yourself, is it worth it? If you are building a site for your portfolio which only a few people will see, and you're only looking to get the job done quickly, perhaps it's better to use a blogging website or a low-code platform.</li>
+        <li>Hosting websites usually costs money. There are ways to host websites for free, such as with GitHub Pages, but most web applications will need to be hosted on a provider such as AWS, Azure or Google Cloud, or on your own server. And as an extreme case, malicious actors can overwhelm your site and drive up your upkeep costs!</li>
+    </ul>
+    <h1>
+        2. Basic Concepts
+    </h1>
+    <div>
+        <h4>
+            2.1. HTML, CSS, JS
+        </h4>
+        <ul>
+            <li>
+                <b>HTML</b> (Hypertext Markup Language) defines <b>what is shown on a page, and how it is displayed</b>.
+            </li>
+            <li>
+                <b>CSS</b> (Cascading Style Sheets) is used to <b>format how HTML is shown</b> (e.g. changing colour, font size, etc.).
+            </li>
+            <li>
+                <b>JS</b> (JavaScript) is used to make HTML and CSS interactive and dynamic, e.g.
+                <ul>
+                    <li>
+                        Read and process text inputs from users
+                    </li>
+                    <li>
+                        Send and fetch data to/from servers
+                    </li>
+                    <li>
+                        Create more advanced formatting and layout which may be difficult with HTML/CSS alone
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4>
+            2.2. Front-end and Back-end
+        </h4>
+        <div class="d-flex justify-content-center">
+            <div class="w-50">
+                <img class="img-fluid" src="assets/frontend-backend.jpeg">
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    The <b>front-end</b> (or <b>client-side</b>) is the part of the application which the end user interacts with.
+                </li>
+                <li>
+                    The <b>back-end</b> (or <b>server-side</b>) is everything else.
+                </li>
+
+            </ul>
+            <b>Life Cycle of a Web Page</b>
+            <ol>
+                <li>
+                    Alice opens enters a URL into her <b>browser</b>.
+                </li>
+                <li>
+                    The <b>browser</b> sends a <b>HTTP</b> request to the address given by the URL, which is received by a <b>server</b> (or not).
+                </li>
+                <li>
+                    The <b>server</b> sends back all the necessary files (HTML, CSS, JS, images, other assets etc.) needed for the requested page via another <b>HTTP</b> request.
+                </li>
+                <li>
+                    The <b>browser</b> receives the files, and renders the raw HTML/CSS/JS into the web page for Alice to use.
+                </li>
+                <li>
+                    Alice interacts with elements on the page, which trigger <b>JavaScript</b> functions, that can alter both the internal state of the page, and what is displayed on the page.
+                </li>
+                <li>
+                    Upon Alice clicking a button to submit some data, some JavaScript runs to send a <b>HTTP</b> request with the submitted data to the <b>server</b>.
+                </li>
+                <li>
+                    The server sends back a <b>HTTP</b> request to confirm it successfully received the sent data.
+                </li>
+            </ol>
+            <b>
+                What about very complex web pages?
+            </b>
+            <div>
+                When developing applications, breaking code into smaller logical sections helps keep the code maintainable. This is usually done by separating HTML/CSS/JS files into multiple files. A <b>bundler</b> (such as webpack or Vite) can be used to re-compile these multiple files into individual HTML/CSS/JS classes for easy deployment and use by end users.
+            </div>
+            <b>
+                What is TypeScript?
+            </b>
+            <div>
+                <b>TypeScript</b> is a superset of JavaScript which adds <b>static typing</b> to JavaScript, and is usually written in <code>.ts</code> files. TypeScript can be compiled to JavaScript and bundled the same as JavaScript can be.
+            </div>
+        </div>
+    </div>
+    <h1>
+        3. Common Frameworks and Libraries
+    </h1>
+    <div>
+        <h4>
+            JavaScript Frameworks
+        </h4>
+        <div>
+            Front-end frameworks are collections of code which can be used to create front-end applications in a quick or efficient way. Frameworks can differ in the amount of structure/flexibility are allowed, the syntax used, and other specific functionality, amongst others. Some common frameworks are listed below (note however that some people don't call all of these 'frameworks' - we will call them frameworks for ease of explanation):
+        </div>
+        <ul>
+            <li>
+                <b>Angular</b>: One of the most widely used front-end frameworks. Supported by Google, and provides a lot of structure to organise code and functionality (good at enforcing good practices, especially in very large applications, but can feel limiting or overly verbose at times).
+            </li>
+            <li>
+                <b>React</b>: One of the most widely used front-end frameworks. Supported by Facebook, and is highly modular and flexible (less enforced structure can mean difficulty in keeping code organised).
+            </li>
+            <li>
+                <b>Vue</b>: A well-known framework inspired by Angular, but with more flexibility. However, not as popular as React or Angular, and less major corporate backing.
+            </li>
+            <li>
+                <b>Svelte</b>: A well-known framework for writing front-end components. Lightweight in rendering and file size, but less popular than the above options, and less major corporate backing.
+            </li>
+        </ul>
+        <h4>
+            CSS Preprocessors
+        </h4>
+        <div>
+            CSS Preprocessors are libraries which compile extensions of the CSS language (which can be a lot easier to work with, especially in large projects), into CSS which is usable by browsers. The next diagram depicts some such preprocessors and their increasing complexity/functionality. We will not use these or go into detail here, but you will likely run into these in real front-end development projects.
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="assets/css-preprocessors.png">
+        </div>
+        <h4>
+            CSS Frameworks
+        </h4>
+        <div>
+            CSS Frameworks are utilities which simplify how styling and layout is handled. Some common such frameworks are:
+        </div>
+        <ul>
+            <li><b>Bootstrap</b>: Arguably the most well-known CSS framework. Provides a small, but versatile and configurable list of CSS classes which can be used in a modular way throughout the application. Beginner-friendly, as even minimal usage can produce good results.</li>
+            <li><b>Tailwind</b>: A newer, but still well-known CSS framework. Provides a large, comprehensive and granular list of CSS classes. Much more verbose and requires more knowledge of basic CSS, but scales very well to complex applications due to being very modular.</li>
+        </ul>
+        <h4>
+            Component Libraries
+        </h4>
+        <div>
+            Component Libraries are - as their name suggest - libraries of components, which can be used with relatively minimal setup. Your choice of specific component library may depend on your chosen JavaScript framework, although the largest component libraries have equivalents in each major framework. Some examples are:
+        </div>
+        <ul>
+            <li><b>NgBootstrap</b>: Bootstrap also has a component library! If you are using Bootstrap for its CSS utilities, it is relatively easy to also use Bootstrap's components (although you can still choose other component libraries.</li>
+            <li><b>Angular Material</b>: This is the Angular library for the <a href="https://m3.material.io/" target="_blank">Material Design specification</a>, a design system from Google. A lot more modern than Bootstrap, but for simplicity we will stick with NgBootstrap here.</li>
+            <li><b>Tailwind UI</b>: Tailwind's UI component library. Similarly to NgBootstrap, works well with its associated CSS framework. However, this is not a free component library, whereas Tailwind CSS is free to use!</li>
+        </ul>
+    </div>
+    <h1>
+        4. Exercises!
+    </h1>
+    <div>
+        <div>
+            To avoid having to install things locally on your machines, we will be using <b>StackBlitz</b> to run our web applications in the browser for us. To start, open this tutorial in StackBlitz <a href="https://stackblitz.com/github/jajetloh/web-dev-crash-course" target="_blank">here</a>.
+        </div>
+        <h4>4.1. Add some content</h4>
+        <div>
+            Add some basic HTML! Try to:
+        </div>
+        <ol>
+            <li>Add some plain text to the area below inside a <code>&lt;div&gt;...&lt;/div&gt;</code></li>
+            <li>Add a button with text inside, using <code>&lt;button&gt;...&lt;/button&gt;</code> and placing text between the tags</li>
+            <li>Add a text input using <code>&lt;input type="text"&gt;</code> (note there is no closing tag)</li>
+            <li>Add the image at <code>assets/jealous-html-css.png</code> image using <code>&lt;img&gt;</code>. Refer to how the previous images on this page were added to see how to select the image!</li>
+        </ol>
+        <!-- Exercise 4.1. | YOUR CONTENT HERE! -->
+
+
+
+        <h4>4.2. Style some content</h4>
+        <div>
+            Copy your code from 4.1. below, and add some styles using Bootstrap classes!
+        </div>
+        <ol>
+            <li>Add some colour to your text using colour classes from <a href="https://getbootstrap.com/docs/5.3/utilities/colors/" target="_blank">here</a></li>
+            <li>Use a Bootstrap button class on your button, and using another class to make it big/small from <a href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank">here</a></li>
+            <li>Use the <code>form-control</code> Bootstrap class on your text input</li>
+            <li>Use the classes <code>border border-primary border-5</code> to add a thick, red border to the image, or find more border style classes <a href="https://getbootstrap.com/docs/5.3/utilities/borders/" target="_blank">here</a></li>
+        </ol>
+        <!-- Exercise 4.2. | YOUR CONTENT HERE! -->
+
+
+
+        <h4>4.3. Lay out some content</h4>
+        Some code to draw a few buttons has been placed below
+        <ol>
+            <li>Use a horizontal alignment class from <a href="https://getbootstrap.com/docs/5.3/layout/columns/#horizontal-alignment" target="_blank">here</a> to distribute your buttons, stretching across the entire width of the container</li>
+            <li>Use a different vertical alignment class from <a href="https://getbootstrap.com/docs/5.3/layout/columns/#horizontal-alignment" target="_blank">here</a> to align the botton edges of the buttons</li>
+            <li>The buttons may look better with spacing between the two rows. Try one of the following classes to the <code>div</code> containing the second row of buttons: <code>mt-1 mt-2 mt-3 mt-4 mt-5</code>
+        </ol>
+        <!-- Exercise 4.3. | YOUR CONTENT HERE! -->
+
+        <div class="d-flex justify-content-______">
+            <button class="btn btn-outline-primary btn-sm">Left</button>
+            <button class="btn btn-outline-primary btn-sm">Centre-Left</button>
+            <button class="btn btn-outline-primary btn-sm">Centre</button>
+            <button class="btn btn-outline-primary btn-sm">Centre-Right</button>
+            <button class="btn btn-outline-primary btn-sm">Right</button>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-outline-success btn-lg">A large button</button>
+            <button class="btn btn-outline-success">A button</button>
+            <button class="btn btn-outline-success btn-sm">A small button</button>
+        </div>
+
+        <h4>4.4. Add some dynamic content</h4>
+        <div class="border-bottom border-dark-subtle mb-4">
+            Below is some code which takes an input number, and displays that number add 3. Make your own example below the existing example, which squares the new input number. Note: you'll also have to add a line to <code>tutorial.component.ts</code>, not just this HTML page!
+        </div>
+
+        <div>
+            <input type="number" [(ngModel)]="numberToAddThreeTo"> + 3 = {{ numberToAddThreeTo + 3 }}
+        </div>
+
+        <!-- Exercise 4.4. | YOUR CONTENT HERE! -->
+
+        <h4>4.5. Create a component</h4>
+        <div>
+            Components are a concept used in most Javascript Frameworks, including Angular. Create your own Angular component and insert it below, by:
+<!--            A modal is a large pop-up box, which is good for bringing up a temporary context for users to interact with. The button below-->
+        </div>
+        <ol>
+            <li>Right-clicking on the <code>app</code> folder in the file explorer, going to Angular Generator, then Component <div class="d-flex justify-content-center"><img src="assets/generate-component.png"></div></li>
+            <li>Enter a name for your component, like <code>random-stuff</code><div class="d-flex justify-content-center"><img src="assets/generate-component-2.png"></div></li>
+            <li>Angular will generate the necessary files for a basic component. Go to <code>random-stuff/random-stuff.component.ts</code> to have a look. The <b>selector </b> <code>app-random-stuff</code> is the HTML tag for your new component.<div class="d-flex justify-content-center"><img src="assets/generate-component-3.png"></div></li>
+            <li>Put <code>&lt;app-random-stuff&gt;</code> below to insert your component into the page!</li>
+            <li>Note: You modify the HTML of the component in <code>random-stuff.component.html</code>, the same way as in previous exercises.</li>
+        </ol>
+
+        <!-- Exercise 4.5. | YOUR CONTENT HERE! -->
+
+
+
+        <h4>4.6. Use a NgBootstrap Component - Typeahead</h4>
+        <div>
+            Component libraries speed up the front-end development process by providing pre-built components that can be used with (relatively) little effort. We will use the <a href="https://ng-bootstrap.github.io/#/components/typeahead/examples" target="_blank">NgBootstrap Typeahead</a> component here, which allows users to select a predefined input based on what they've already entered.
+        </div>
+        <ol>
+            <li>The NgBootstrap library separates each of its available components into a separate <b>NgModule</b>, so we need to import the <code>NgbTypeaheadModule</code> module from <code>@ng-bootstrap/ng-bootstrap</code> in <code>app.module.ts</code> (the top-level module of our application). This way, we can access the component in <code>random-stuff.component.html</code></li>
+            <li>We will now copy the 'Simple Typeahead' example from the NgBootstrap documentation (once we have this in, we can modify as we wish). Go to the <a href="https://ng-bootstrap.github.io/#/components/typeahead/examples" target="_blank">Typeahead documentation</a>, view the code for the Simple Typeahead, and copy the <code>states</code> const into <code>random-stuff.component.ts</code>, directly underneath the imports.</li>
+            <li>Next copy the <code>search: OperatorFunction...</code> property from the documented example, into <code>RandomStuffComponent</code> in <code>random-stuff.component.ts</code>. You may need to add the import statements <code>import &lcub; Observable, OperatorFunction &rcub; from 'rxjs'</code> and <code>import &lcub; debounceTime, distinctUntilChanged, map &rcub; from 'rxjs/operators'</code>. This object defines how the typeahead will behave - after 200ms from the user's last keystroke, if there are more than two characters, the object searches through the <code>states</code> object for strings which contain the characters, and returns the first 10.</li>
+            <li>Time to add the text input, and attach our Typeahead feature. Add an <code>input</code> element to <code>random-stuff.component.html</code>, and also add <code>[ngbTypeahead]="search"</code> to the tag. This invokes the <code>NgbTypeaheadModule</code>, and passes in the <code>search</code> object to define how the Typeahead should behave.</li>
+            <li>Try out your new typeahead!</li>
+        </ol>
+
+        <h4>4.7. Use a NgBootstrap Component - Modal</h4>
+        <div>
+            The button below opens a modal box. Now create your own modal, which opens <code>RandomStuffComponent</code> in the modal! No specific directions this time, if you've made it this far, you've got this!
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary" (click)="openModal()">Click to open an existing Modal</button>
+        </div>
+
+
+
+    </div>
+    <h4>
+
+    </h4>
+</div>
